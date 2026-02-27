@@ -65,10 +65,11 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;point
 .col-content{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .col-card{padding:36px;border:1px solid var(--rule);position:relative;transition:.4s}
 .col-card:hover{border-color:var(--ink);transform:translateY(-4px)}
-.col-card .card-icon{font-size:2rem;margin-bottom:20px;display:block}
+.col-card .card-icon{margin-bottom:20px;display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(212,145,26,.12),rgba(232,168,23,.06))}
+.col-card .card-icon svg{width:24px;height:24px;stroke:var(--rust);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .col-card h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:-.3px}
 .col-card p{font-size:.9rem;color:var(--muted);line-height:1.7}
-.col-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:0;background:var(--rust);transition:.4s}
+.col-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:linear-gradient(180deg,var(--rust),var(--gold));transition:.4s}
 .col-card:hover::before{height:100%}
 
 /* === PACKAGES — NEWSPAPER GRID === */
@@ -207,22 +208,22 @@ footer a:hover{color:var(--rust)}
   </div>
   <div class="col-content">
     <div class="col-card">
-      <span class="card-icon" style="font-size:1.4rem;font-weight:700;color:var(--rust);font-family:'Space Grotesk',sans-serif">01</span>
+      <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>
       <h3>Full Platform Setup</h3>
       <p>OpenClaw installed, configured, and running on your infrastructure. Gateway, models, security — all of it.</p>
     </div>
     <div class="col-card">
-      <span class="card-icon" style="font-size:1.4rem;font-weight:700;color:var(--rust);font-family:'Space Grotesk',sans-serif">02</span>
+      <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
       <h3>Tool Integrations</h3>
       <p>We wire your AI into Gmail, Outlook, Slack, Discord, your CRM, calendar, and anything with an API.</p>
     </div>
     <div class="col-card">
-      <span class="card-icon" style="font-size:1.4rem;font-weight:700;color:var(--rust);font-family:'Space Grotesk',sans-serif">03</span>
+      <span class="card-icon"><svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></span>
       <h3>Workflow Automation</h3>
       <p>Cron jobs, scheduled reports, auto-responses, lead follow-ups — set once, runs forever.</p>
     </div>
     <div class="col-card">
-      <span class="card-icon" style="font-size:1.4rem;font-weight:700;color:var(--rust);font-family:'Space Grotesk',sans-serif">04</span>
+      <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
       <h3>Custom Skills</h3>
       <p>Need something specific? We build custom AI skills tailored to your exact business processes.</p>
     </div>
