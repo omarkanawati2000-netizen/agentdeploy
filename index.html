@@ -103,7 +103,9 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;point
 .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
 .timeline::before{content:'';position:absolute;top:48px;left:0;right:0;height:1px;background:var(--rule)}
 .step{padding:0 24px;position:relative}
-.step .dot{display:none}
+.step .dot{width:12px;height:12px;border-radius:50%;border:2px solid var(--rust);background:var(--paper);position:relative;z-index:1;margin-bottom:28px}
+.step:hover .dot{background:var(--rust)}
+@media(max-width:900px){.step .dot{display:none}}
 .step .step-num{font-family:'Newsreader',serif;font-size:4rem;font-weight:300;color:var(--rule);line-height:1;margin-bottom:12px}
 .step h4{font-size:.95rem;font-weight:600;margin-bottom:10px}
 .step p{font-size:.85rem;color:var(--muted);line-height:1.6}
