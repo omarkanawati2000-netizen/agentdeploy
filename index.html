@@ -130,6 +130,18 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;point
 .cta-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:var(--rust);transition:.4s;z-index:0}
 .cta-btn:hover::before{left:0}
 .cta-btn:hover{color:var(--paper)}
+
+/* === CONTACT FORM === */
+.contact-form{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:16px;text-align:left}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:14px 18px;background:rgba(255,255,255,.05);border:1px solid var(--rule);color:var(--ink);font-family:'Space Grotesk',sans-serif;font-size:.9rem;border-radius:0;outline:none;transition:.3s}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:var(--rust)}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--muted)}
+.contact-form select{appearance:none;cursor:pointer}
+.contact-form select option{background:var(--paper);color:var(--ink)}
+.contact-form textarea{resize:vertical;min-height:100px}
+.contact-form button{cursor:pointer;border:none;width:100%}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}}
 .cta-btn span{position:relative;z-index:1}
 
 /* === FOOTER === */
@@ -176,7 +188,7 @@ footer a:hover{color:var(--rust)}
       <a href="#services">Services</a>
       <a href="#packages">Pricing</a>
       <a href="#process">Process</a>
-      <a href="mailto:admin@agentdeploy.info" class="cta-nav">Start a Project</a>
+      <a href="#contact" class="cta-nav">Start a Project</a>
     </nav>
   </div>
 </header>
@@ -250,7 +262,7 @@ footer a:hover{color:var(--rust)}
           <li>1-hour training walkthrough</li>
           <li>7-day post-launch support</li>
         </ul>
-        <a href="mailto:admin@agentdeploy.info?subject=Starter%20Package%20Inquiry" class="pkg-cta">Get Started</a>
+        <a href="#contact" class="pkg-cta">Get Started</a>
       </div>
       <div class="pkg featured">
         <div class="pkg-label">Most Popular</div>
@@ -264,7 +276,7 @@ footer a:hover{color:var(--rust)}
           <li>Discord or Slack bot deployment</li>
           <li>2-hour training + 30-day support</li>
         </ul>
-        <a href="mailto:admin@agentdeploy.info?subject=Professional%20Package%20Inquiry" class="pkg-cta">Get Started</a>
+        <a href="#contact" class="pkg-cta">Get Started</a>
       </div>
       <div class="pkg">
         <div class="pkg-label">Full Service</div>
@@ -278,7 +290,7 @@ footer a:hover{color:var(--rust)}
           <li>90-day priority support</li>
           <li>Monthly retainer option — $150/mo</li>
         </ul>
-        <a href="mailto:admin@agentdeploy.info?subject=Enterprise%20Package%20Inquiry" class="pkg-cta">Get Started</a>
+        <a href="#contact" class="pkg-cta">Get Started</a>
       </div>
     </div>
   </div>
@@ -352,11 +364,25 @@ footer a:hover{color:var(--rust)}
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
+<!-- CONTACT -->
+<section class="cta-section" id="contact">
   <h2>Ready to put AI to work?</h2>
   <p>Free 15-minute consultation. No commitment, no sales pitch.</p>
-  <a href="mailto:admin@agentdeploy.info?subject=Free%20Consultation%20Request" class="cta-btn"><span>Send Us an Email →</span></a>
+  <form action="https://formspree.io/f/mdaljpve" method="POST" class="contact-form">
+    <div class="form-row">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+    </div>
+    <select name="package">
+      <option value="" disabled selected>Select a package (optional)</option>
+      <option value="Starter ($500)">Starter — $500</option>
+      <option value="Professional ($1,000)">Professional — $1,000</option>
+      <option value="Enterprise ($1,500+)">Enterprise — $1,500+</option>
+      <option value="Just exploring">Just exploring</option>
+    </select>
+    <textarea name="message" placeholder="Tell us about your business and what you'd like to automate..." rows="4"></textarea>
+    <button type="submit" class="cta-btn"><span>Send Message →</span></button>
+  </form>
 </section>
 
 <!-- FOOTER -->
